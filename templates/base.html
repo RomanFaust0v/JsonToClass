@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div>
+      <a href="/">Home</a>
+      | 
+      <!-- <a href="/about">About</a> -->
+    </div>
+    {% block content %}
+    <form action="/" method="POST">
+        <h3>Convert JSON</h3>
+        <p>
+          <label for="name">Name of the class:</label>
+          <input type="text" name="className"/>
+        </p>
+        <p>
+          <label for="json">JSON:</label>
+          <textarea name="json"></textarea>
+        </p>
+        <p><input type="submit" name="create_class"/></p>
+    </form>
+    {% if data %}
+    {% for key, value in data.items() %}
+      <p><a href="/class/{{ key }}">{{ value }}</a></p>
+    {% endfor %}
+    {% endif %}
+    {% endblock %}
+  </body>
+</html>
