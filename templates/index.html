@@ -6,6 +6,10 @@
     <div class="content">
       <h1>JSON reader</h1>
 
+      <form action="/" method="POST">
+        <input type="text" name="jsonString" id = "content">
+        <input type="submit" value="Submit">
+      </form>
       <table>
          <tr>
           <th>JSON String</th>
@@ -16,9 +20,5 @@
           <td>{{ classObject }}</td>
          </tr>
       </table>
-      <form action="/" method="POST">
-        <input type="text" name="jsonString" id = "content">
-        <input type="submit" value="Submit">
-      </form>
     </div>
 {% endblock %}
