@@ -11,10 +11,12 @@ def index():
         jsonString = request.form['jsonString']
         data = request.form['jsonString']
         data = stringToJSON(data)
-        return render_template('index.html', jsonString = jsonString, classObject=data)
+        print(data)
+        return render_template('index.html', jsonString = jsonString, classObjects=data)
     else:
         return render_template('index.html')
   
 
 if __name__ == "__main__":
     app.run(debug=True)
+    

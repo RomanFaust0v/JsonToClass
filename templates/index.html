@@ -7,7 +7,7 @@
       <h1>JSON reader</h1>
 
       <form action="/" method="POST">
-        <input type="text" name="jsonString" id = "content">
+        <input type="TextAreaField" name="jsonString" id = "content">
         <input type="submit" value="Submit">
       </form>
       <table>
@@ -17,7 +17,13 @@
          </tr>
          <tr>
           <td>{{ jsonString }}</td>
-          <td>{{ classObject }}</td>
+          <td>
+            {% for classObject in classObjects %}
+            <p>
+            <code>{{ classObject }}</code>
+            </p>
+            {% endfor %}
+          </td>
          </tr>
       </table>
     </div>
